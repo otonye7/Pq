@@ -11,6 +11,11 @@ export const RightGridContainer = styled.div`
      width: 60%;
  }
 
+ .page {
+     width: 90%;
+     margin: 0 auto;
+ }
+
  .forms {
      display: flex;
      flex-direction: column;

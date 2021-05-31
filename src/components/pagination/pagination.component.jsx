@@ -1,24 +1,23 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React  from 'react';
 import Pagination from '@material-ui/lab/Pagination';
+import  RightGrid from '../right-grid/right-grid.component';
+import { PageContainer} from './pagination.styles';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > *': {
-      marginTop: theme.spacing(2),
-    },
-  },
-}));
+
 
 const PaginationComponent = () => {
-  const classes = useStyles();
+
   return (
-    <div className={classes.root}>
-      <Pagination count={10} />
-      <Pagination count={10} color="primary" />
-      <Pagination count={10} color="secondary" />
-      <Pagination count={10} disabled />
+    <PageContainer>
+    <div className="">
+      <Pagination
+       count={4}
+    //    defaultPage={<RightGrid />}
+       color="secondary"
+       size="medium" 
+       />
     </div>
+    </PageContainer>
   );
 }
 

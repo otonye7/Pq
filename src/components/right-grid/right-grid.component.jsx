@@ -5,12 +5,14 @@ import  Button from '../button/button.component';
 import  PaginationComponent from '../pagination/pagination.component';
 
 
-const RightGrid = () => {
+const RightGrid = (props) => {
+    console.log(props)
    return (
        <RightGridContainer>
            <div className='pagination'>
                <PaginationComponent />
            </div>
+           <br />
            <div className='container'>
                <h4 className='title'>
                    What Do You Do ?

@@ -9,6 +9,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const CalendarComponent = () => {
     const [value, onChange] = useState(new Date())
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click)
     return (
     <CalendarContainer>
         <div className='calendar-text'>
@@ -18,17 +20,23 @@ const CalendarComponent = () => {
           <div className='icons'> 
               <DateRangeIcon className='range'/>
               <h6 className='pay-text'>Select pay date</h6>
-              <ExpandMoreIcon />
+              <ExpandMoreIcon onClick={handleClick}/>
           </div>
-    </Card>
+          {
+    click ? 
     <div className='calendar'> 
-    <Calendar
+       <Calendar
         onChange={onChange}
         value={value}
         selectRange={true}
         showWeekNumbers={true}
     />
-   </div>
+    </div>
+      :
+     null
+    }
+    
+    </Card>
    </CalendarContainer>
     )
 }

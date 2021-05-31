@@ -13,9 +13,10 @@ export const Container = styled.div`
 
  .image {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url(${Image});
     background-position: center;
     background-size: cover;
+    object-fit: cover;
  }
 `;

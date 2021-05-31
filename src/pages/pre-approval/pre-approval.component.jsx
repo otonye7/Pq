@@ -5,8 +5,13 @@ import RightGrid from '../../components/right-grid/right-grid.component';
 const PreApproval = () => {
     return (
         <Container>
-             <LeftGrid />
-             <RightGrid />
+            <div className='left'>
+                <LeftGrid />
+            </div>
+             <div className='right'>
+                 <RightGrid />
+             </div>
+             
         </Container>
        
     )

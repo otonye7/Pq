@@ -5,6 +5,13 @@ import styled from 'styled-components';
 export const CalendarContainer = styled.div`
  width: 100%;
  padding-top: 1rem;
+ overflow: hidden;
+ overflow-x: hidden;
+ 
+
+ .root {
+     padding-top: 0.8rem;
+ }
 
  .calendar {
      padding-top: 0.5rem;
@@ -29,9 +36,6 @@ export const CalendarContainer = styled.div`
 
  .range {
      padding-bottom: 0.2rem;
- }
- .root {
-     padding-top: 0.8rem;
  }
  .icons {
      display: flex;
