@@ -1,6 +1,5 @@
 import React  from 'react';
 import Pagination from '@material-ui/lab/Pagination';
-import  RightGrid from '../right-grid/right-grid.component';
 import { PageContainer} from './pagination.styles';
 
 

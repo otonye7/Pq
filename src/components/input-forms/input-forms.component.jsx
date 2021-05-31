@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { GridFormContainer} from './input-forms.styles';
 import { Input } from 'antd';
  import   CalendarComponent from '../calendar/calendar.component';
@@ -6,6 +6,17 @@ import { Input } from 'antd';
 
 
 const InputForm = () => {
+  const [data, setData] = useState({
+    salary: ''
+  })
+
+  const handleChange = e => {
+      const newData = {...data}
+      newData[e.target.id] = e.target.value
+      setData(newData)
+      console.log(newData)
+  }
+
 
   return (
     <GridFormContainer>
@@ -20,7 +31,13 @@ const InputForm = () => {
            <h1 className='hash'>₦</h1>
         </div>
       <div className='input'>
-           <Input  size="large" />
+           <Input 
+           id='salary'
+           size="large"
+           type="number"
+           value={data.salary}
+           required={true}
+           onChange={handleChange} />
        </div>
       </div>
       <CalendarComponent />

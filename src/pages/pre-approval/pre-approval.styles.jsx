@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
-max-width: 1340px;
+max-width: 1500px;
 width: 99%; 
 display: grid;
 grid-template-columns: 1fr 1fr;

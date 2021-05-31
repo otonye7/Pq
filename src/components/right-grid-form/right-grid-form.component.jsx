@@ -5,6 +5,7 @@ import { Input } from 'antd';
 
 const GridForm = () => {
 
+
   return (
     <GridFormContainer>
 
@@ -15,10 +16,15 @@ const GridForm = () => {
         <h1 className='hash'>₦</h1>
     </div>
       <div className='input'>
-    <Input  size="large" />
+    <Input
+       type="number"
+       size="large"
+       required={true}
+        />
     </div>
   </GridFormContainer>
   );
 }
 
 export default GridForm;
+
