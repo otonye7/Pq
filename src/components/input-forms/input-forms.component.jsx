@@ -1,22 +1,10 @@
-import React, {useState} from 'react';
 import { GridFormContainer} from './input-forms.styles';
 import { Input } from 'antd';
  import   CalendarComponent from '../calendar/calendar.component';
  import   Loan from '../loans/loans.component';
 
 
-const InputForm = () => {
-  const [data, setData] = useState({
-    salary: ''
-  })
-
-  const handleChange = e => {
-      const newData = {...data}
-      newData[e.target.id] = e.target.value
-      setData(newData)
-      console.log(newData)
-  }
-
+const InputForm = ({data, handleChange, loans, dates}) => {
 
   return (
     <GridFormContainer>
@@ -35,12 +23,13 @@ const InputForm = () => {
            id='salary'
            size="large"
            type="number"
-           value={data.salary}
+           value={data}
            required={true}
-           onChange={handleChange} />
+           onChange={handleChange}
+            />
        </div>
       </div>
-      <CalendarComponent />
+      <CalendarComponent dates={dates} handleChange={handleChange}/>
       <Loan />
   </GridFormContainer>
   );

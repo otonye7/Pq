@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 
 export const ButtonContainer = styled.div`
- width: 60%;
+ width: 100%;
  display: flex;
  justify-content: center;
- padding-top: 4rem;
 
  .button {
-      width: 150px;
+      width: 100%;
      border-radius: 15px;
  }
 `;

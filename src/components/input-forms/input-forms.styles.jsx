@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 
 export const GridFormContainer = styled.div`
-  width: 60%;
+  width: 100%;
   padding-top: 1rem;
+  
   
  
   .earning-container {

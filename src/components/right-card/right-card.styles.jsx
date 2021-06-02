@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 export const Container = styled.div`
- width: 60%;
+ width: 100%;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
 
@@ -37,13 +37,13 @@ export const Container = styled.div`
   width: 70px;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
   height: auto;
   border-radius: 5px;
   text-decoration: none;
+  padding: 0.8rem;
 }
 
 

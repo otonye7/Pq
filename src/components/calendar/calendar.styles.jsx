@@ -13,10 +13,6 @@ export const CalendarContainer = styled.div`
      padding-top: 0.8rem;
  }
 
- .calendar {
-     padding-top: 0.5rem;
- }
-
  .pay-text {
     color: #AF2363;
      font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;

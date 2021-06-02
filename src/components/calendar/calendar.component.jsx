@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { CalendarContainer} from './calendar.styles';
 import Card from '@material-ui/core/Card';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Grid from '@material-ui/core/Grid';
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
 
 
 const CalendarComponent = () => {
-    const [value, onChange] = useState(new Date())
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click)
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2021-05-31T21:11:54'));
+
+    const handleDateChange = (date) => {
+      setSelectedDate(date);
+    };
+  
+
     return (
     <CalendarContainer>
         <div className='calendar-text'>
@@ -25,12 +36,23 @@ const CalendarComponent = () => {
           {
     click ? 
     <div className='calendar'> 
-       <Calendar
-        onChange={onChange}
-        value={value}
-        selectRange={true}
-        showWeekNumbers={true}
-    />
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <Grid container justify="space-around">
+        
+        <KeyboardDatePicker
+          margin="normal"
+          id="date-picker-dialog"
+          label="Date picker dialog"
+          format="MM/dd/yyyy"
+          value={selectedDate}
+          onChange={handleDateChange}
+          KeyboardButtonProps={{
+            'aria-label': 'change date',
+          }}
+        />
+        
+      </Grid>
+    </MuiPickersUtilsProvider>
     </div>
       :
      null
@@ -42,5 +64,4 @@ const CalendarComponent = () => {
 }
 
 export default CalendarComponent;
-
 

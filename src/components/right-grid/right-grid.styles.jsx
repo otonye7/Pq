@@ -3,18 +3,16 @@ import styled from 'styled-components';
 
 
 export const RightGridContainer = styled.div`
- width: 80%;
+ width: 90%;
  margin: 0 auto;
 
 
+
+
  .container {
-     width: 60%;
+     width: 100%;
  }
 
- .page {
-     width: 90%;
-     margin: 0 auto;
- }
 
  .forms {
      display: flex;

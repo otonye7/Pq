@@ -1,18 +1,14 @@
+import React  from 'react';
 import { RightGridContainer} from './right-grid.styles';
 import  RightCard from '../right-card/right-card.component';
 import  InputForm from '../input-forms/input-forms.component';
-import  Button from '../button/button.component';
-import  PaginationComponent from '../pagination/pagination.component';
+// import  Button from '../button/button.component';
 
 
 const RightGrid = (props) => {
-    console.log(props)
+    
    return (
        <RightGridContainer>
-           <div className='pagination'>
-               <PaginationComponent />
-           </div>
-           <br />
            <div className='container'>
                <h4 className='title'>
                    What Do You Do ?
@@ -22,9 +18,8 @@ const RightGrid = (props) => {
                  <RightCard /> 
             </div>
              <div className='forms'>
-                 <InputForm />
+                 <InputForm  />
             </div>
-            <Button />
        </RightGridContainer>
    )
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
  width: 80%;
  margin: 0 auto;
- padding-top: 4rem;
+ padding-top: 2rem;
 
  .cart-title {
      width: 100%;
